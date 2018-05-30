@@ -21,7 +21,9 @@ class Trash extends Component {
     }
 
     return (
-      <div className={className} onClick={clickHandler}>
+      <div
+        className={className}
+        onClick={clickHandler}>
         <img src={ TrashIcon } alt="Trash" className="trash"></img>
       </div>
     );
