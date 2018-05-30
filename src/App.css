@@ -29,6 +29,10 @@ body {
   height: 120px;
 }
 
+.bin.empty .trash {
+  display: none;
+}
+
 .overall-data {
   color: #FEFAE0;
 }
