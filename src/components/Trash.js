@@ -9,21 +9,22 @@ class Trash extends Component {
     onTrashClicked: PropTypes.func,
   }
 
+  clickHandler = () => {
+    if (this.props.isTrashVisible) {
+      this.props.onTrashClicked();
+    }
+  }
+
   render() {
     let className = 'bin'
     if (!this.props.isTrashVisible) {
       className += ' empty';
     }
 
-    let clickHandler;
-    if (this.props.isTrashVisible) {
-      clickHandler = this.props.onTrashClicked;
-    }
-
     return (
       <div
         className={className}
-        onClick={clickHandler}>
+        onClick={this.clickHandler}>
         <img src={ TrashIcon } alt="Trash" className="trash"></img>
       </div>
     );
